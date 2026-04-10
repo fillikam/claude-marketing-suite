@@ -1,0 +1,4 @@
+# AI Marketing Suite — Python Dependencies
+# Core (no external dependencies needed — scripts use stdlib)
+# Optional (for enhanced functionality):
+reportlab>=4.0        # PDF report generation
