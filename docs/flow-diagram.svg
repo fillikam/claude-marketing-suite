@@ -1,76 +1,113 @@
-<svg width="720" height="460" viewBox="0 0 720 460" xmlns="http://www.w3.org/2000/svg" style="background:#fff;border-radius:16px;">
+<svg width="800" height="680" viewBox="0 0 800 680" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <marker id="arr" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#aaa"/>
+    <marker id="arr" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <polygon points="0 0, 8 3, 0 6" fill="#94a3b8"/>
     </marker>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#00000018"/>
+    </filter>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f8fafc"/>
+      <stop offset="100%" stop-color="#f1f5f9"/>
+    </linearGradient>
   </defs>
 
-  <!-- arrows -->
-  <!-- report -> audit -->
-  <line x1="295" y1="65" x2="175" y2="143" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- report -> landing -->
-  <line x1="360" y1="70" x2="360" y2="143" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- report -> competitors -->
-  <line x1="425" y1="65" x2="545" y2="143" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Background -->
+  <rect width="800" height="680" rx="20" fill="url(#bgGrad)" stroke="#e2e8f0" stroke-width="1.5"/>
 
-  <!-- audit -> brand -->
-  <line x1="175" y1="195" x2="265" y2="243" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- landing -> brand -->
-  <line x1="340" y1="195" x2="295" y2="243" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- landing -> audience -->
-  <line x1="380" y1="195" x2="425" y2="243" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- competitors -> audience -->
-  <line x1="545" y1="195" x2="455" y2="243" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- Title -->
+  <text x="400" y="36" text-anchor="middle" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#64748b" letter-spacing="1">ПОТОК ДАННЫХ МЕЖДУ СКИЛЛАМИ</text>
 
-  <!-- brand -> emails -->
-  <line x1="260" y1="295" x2="170" y2="343" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- brand -> social -->
-  <line x1="285" y1="295" x2="330" y2="343" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- audience -> social -->
-  <line x1="435" y1="295" x2="390" y2="343" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
-  <!-- audience -> ads -->
-  <line x1="460" y1="295" x2="545" y2="343" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- ARROWS: report level -->
+  <path d="M 318 114 L 188 182" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,3"/>
+  <path d="M 400 116 L 400 182" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,3"/>
+  <path d="M 482 114 L 612 182" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)" stroke-dasharray="5,3"/>
 
-  <!-- social -> headlines -->
-  <line x1="360" y1="395" x2="360" y2="423" stroke="#aaa" stroke-width="1.5" marker-end="url(#arr)"/>
+  <!-- ARROWS: audit/landing/competitors -> brand/audience -->
+  <path d="M 188 242 Q 200 284 278 312" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 370 242 L 318 312" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 430 242 L 482 312" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 612 242 Q 600 284 522 312" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 
-  <!-- /aim report -->
-  <rect x="270" y="20" width="180" height="46" rx="10" fill="#e8e6f5" stroke="#c5c0e8" stroke-width="1.5"/>
-  <text x="360" y="48" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim report</text>
+  <!-- ARROWS: brand/audience -> emails/social/ads -->
+  <path d="M 278 382 Q 240 414 188 442" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 318 382 L 358 442" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 482 382 L 442 442" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
+  <path d="M 522 382 Q 560 414 608 442" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 
-  <!-- /aim audit -->
-  <rect x="85" y="148" width="175" height="46" rx="10" fill="#d6eeea" stroke="#a8d8d2" stroke-width="1.5"/>
-  <text x="172" y="176" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim audit</text>
+  <!-- ARROW: social -> headlines -->
+  <path d="M 400 502 L 400 552" stroke="#94a3b8" stroke-width="1.5" fill="none" marker-end="url(#arr)"/>
 
-  <!-- /aim landing -->
-  <rect x="272" y="148" width="175" height="46" rx="10" fill="#d6eeea" stroke="#a8d8d2" stroke-width="1.5"/>
-  <text x="360" y="176" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim landing</text>
+  <!-- ARROW LABELS: report level -->
+  <text x="224" y="150" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#94a3b8">полный аудит</text>
+  <text x="418" y="154" text-anchor="start" font-family="-apple-system,sans-serif" font-size="9.5" fill="#94a3b8">CRO-данные</text>
+  <text x="576" y="150" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#94a3b8">конкуренты</text>
 
-  <!-- /aim competitors -->
-  <rect x="458" y="148" width="185" height="46" rx="10" fill="#d6eeea" stroke="#a8d8d2" stroke-width="1.5"/>
-  <text x="550" y="176" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim competitors</text>
+  <!-- ARROW LABELS: level 2 -->
+  <text x="193" y="285" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">tone of site</text>
+  <text x="332" y="280" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">CTA-фреймы</text>
+  <text x="468" y="280" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">боли ЦА</text>
+  <text x="606" y="285" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">позиция рынка</text>
 
-  <!-- /aim brand -->
-  <rect x="180" y="248" width="160" height="46" rx="10" fill="#f5ddd9" stroke="#e8bbb5" stroke-width="1.5"/>
-  <text x="260" y="276" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim brand</text>
+  <!-- ARROW LABELS: level 3 -->
+  <text x="196" y="421" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">голос бренда</text>
+  <text x="322" y="418" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">стиль</text>
+  <text x="478" y="418" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">сегменты</text>
+  <text x="604" y="421" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">триггеры ЦА</text>
 
-  <!-- /aim audience -->
-  <rect x="365" y="248" width="175" height="46" rx="10" fill="#f5ddd9" stroke="#e8bbb5" stroke-width="1.5"/>
-  <text x="452" y="276" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim audience</text>
+  <!-- ARROW LABELS: level 4 -->
+  <text x="418" y="531" text-anchor="start" font-family="-apple-system,sans-serif" font-size="9" fill="#94a3b8">топ-темы</text>
 
-  <!-- /aim emails -->
-  <rect x="75" y="348" width="165" height="46" rx="10" fill="#f5ecd6" stroke="#e8d5a8" stroke-width="1.5"/>
-  <text x="157" y="376" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim emails</text>
+  <!-- NODE: /aim report — purple -->
+  <rect x="280" y="60" width="240" height="58" rx="12" fill="#ede9fe" stroke="#c4b5fd" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="400" y="82" text-anchor="middle" font-family="'SF Mono','Fira Code',monospace" font-size="15" font-weight="700" fill="#6d28d9">/aim report</text>
+  <text x="400" y="104" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="#7c3aed">собирает всё → MARKETING-REPORT.md</text>
 
-  <!-- /aim social -->
-  <rect x="272" y="348" width="165" height="46" rx="10" fill="#f5ecd6" stroke="#e8d5a8" stroke-width="1.5"/>
-  <text x="355" y="376" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim social</text>
+  <!-- NODE: /aim audit — teal -->
+  <rect x="88" y="186" width="200" height="58" rx="12" fill="#ccfbf1" stroke="#5eead4" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="188" y="208" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#0f766e">/aim audit</text>
+  <text x="188" y="230" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#0d9488">полный аудит → MARKETING-AUDIT.md</text>
 
-  <!-- /aim ads -->
-  <rect x="468" y="348" width="140" height="46" rx="10" fill="#f5ecd6" stroke="#e8d5a8" stroke-width="1.5"/>
-  <text x="538" y="376" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim ads</text>
+  <!-- NODE: /aim landing — teal -->
+  <rect x="300" y="186" width="200" height="58" rx="12" fill="#ccfbf1" stroke="#5eead4" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="400" y="208" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#0f766e">/aim landing</text>
+  <text x="400" y="230" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#0d9488">CRO-аудит → LANDING-CRO.md</text>
 
-  <!-- /aim headlines -->
-  <rect x="265" y="423" width="190" height="46" rx="10" fill="#d6e8f5" stroke="#a8c8e8" stroke-width="1.5"/>
-  <text x="360" y="451" text-anchor="middle" font-family="monospace" font-size="16" fill="#444">/aim headlines</text>
+  <!-- NODE: /aim competitors — teal -->
+  <rect x="512" y="186" width="200" height="58" rx="12" fill="#ccfbf1" stroke="#5eead4" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="612" y="208" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#0f766e">/aim competitors</text>
+  <text x="612" y="230" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#0d9488">разведка → COMPETITOR-REPORT.md</text>
+
+  <!-- NODE: /aim brand — rose -->
+  <rect x="198" y="316" width="200" height="58" rx="12" fill="#ffe4e6" stroke="#fca5a5" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="298" y="338" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#be123c">/aim brand</text>
+  <text x="298" y="360" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#e11d48">голос бренда → BRAND-VOICE.md</text>
+
+  <!-- NODE: /aim audience — rose -->
+  <rect x="402" y="316" width="200" height="58" rx="12" fill="#ffe4e6" stroke="#fca5a5" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="502" y="338" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#be123c">/aim audience</text>
+  <text x="502" y="360" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#e11d48">сегменты ЦА → AUDIENCE-RESEARCH.md</text>
+
+  <!-- NODE: /aim emails — amber -->
+  <rect x="88" y="446" width="200" height="58" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="188" y="468" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#92400e">/aim emails</text>
+  <text x="188" y="490" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#b45309">email-цепочки → EMAIL-SEQUENCES.md</text>
+
+  <!-- NODE: /aim social — amber -->
+  <rect x="300" y="446" width="200" height="58" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="400" y="468" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#92400e">/aim social</text>
+  <text x="400" y="490" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#b45309">30 дней контента → SOCIAL-CALENDAR.md</text>
+
+  <!-- NODE: /aim ads — amber -->
+  <rect x="512" y="446" width="200" height="58" rx="12" fill="#fef3c7" stroke="#fcd34d" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="612" y="468" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#92400e">/aim ads</text>
+  <text x="612" y="490" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#b45309">кампании → AD-CAMPAIGNS.md</text>
+
+  <!-- NODE: /aim headlines — sky -->
+  <rect x="300" y="556" width="200" height="58" rx="12" fill="#e0f2fe" stroke="#7dd3fc" stroke-width="1.8" filter="url(#shadow)"/>
+  <text x="400" y="578" text-anchor="middle" font-family="'SF Mono',monospace" font-size="14" font-weight="700" fill="#0369a1">/aim headlines</text>
+  <text x="400" y="600" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="9.5" fill="#0284c7">100 заголовков → HEADLINES.md</text>
+
+  <!-- Bottom credit -->
+  <text x="400" y="650" text-anchor="middle" font-family="-apple-system,sans-serif" font-size="10" fill="#cbd5e1">Лаборатория ИИ-Маркетинга · t.me/moremarketingisaid</text>
 </svg>
