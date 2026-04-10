@@ -131,18 +131,23 @@ Claude Marketing Suite. Распакуй архив и установи кажд
 
 ---
 
-### Способ 4: Через терминал (для разработчиков)
+### Способ 4: Автоматическая установка через терминал (для разработчиков)
+
+Одна команда — устанавливает всё: скиллы, агентов, скрипты, шаблоны.
 
 ```bash
-# 1. Установите Claude Code
-npm install -g @anthropic-ai/claude-code
+# Установка одной командой (через curl)
+curl -fsSL https://raw.githubusercontent.com/fillikam/claude-marketing-suite/master/install.sh | bash
 
-# 2. Склонируйте репозиторий
-git clone https://github.com/Fillikam/claude-marketing-suite.git
+# Или если уже склонировали репо
+git clone https://github.com/fillikam/claude-marketing-suite.git
 cd claude-marketing-suite
+bash install.sh
+```
 
-# 3. Запустите первый аудит
-/aim audit https://your-site.com
+Для удаления:
+```bash
+bash uninstall.sh
 ```
 
 Подробнее: [QUICK-START.md](QUICK-START.md)
@@ -157,17 +162,15 @@ cd claude-marketing-suite
 
 ---
 
-## Архитектура
+## Что входит в пакет
 
-Каждый скилл состоит из:
-- **`.skill` файл** -- YAML-конфигурация с триггерами и метаданными
-- **`SKILL.md`** -- промпт-инструкция для Claude
-
-Скиллы используют:
-- Структурированный Markdown-вывод
-- Кросс-скилл интеграцию (автоматически подхватывают файлы друг друга)
-- Guardrails для качества вывода
-- Fallback-протоколы при недостатке данных
+| Компонент | Что это | Папка |
+|-----------|---------|-------|
+| 10 скиллов | `.skill` файлы + SKILL.md — основные команды `/aim` | `skills/` |
+| Оркестратор | Главный роутер всех `/aim` команд | `aim/` |
+| 5 агентов | Параллельные субагенты для `/aim audit` | `agents/` |
+| 4 Python-скрипта | Анализ страниц, конкурентов, PDF, контент-план | `scripts/` |
+| 6 шаблонов | Email-серии, контент-календарь, чеклист запуска, пропозал | `templates/` |
 
 Подробнее: [docs/architecture.md](docs/architecture.md)
 
