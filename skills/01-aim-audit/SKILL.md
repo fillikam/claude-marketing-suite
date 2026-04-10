@@ -1,5 +1,5 @@
 ---
-name: market-audit
+name: aim-audit
 description: >
   Запускает полный маркетинговый аудит любого сайта и генерирует клиентский отчёт
   MARKETING-AUDIT.md со скорингом, приоритетами и оценкой revenue impact.

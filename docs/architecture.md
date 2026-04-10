@@ -11,7 +11,7 @@ Claude Marketing Suite построен как набор автономных, 
 Каждый скилл имеет `.skill` файл с YAML-конфигурацией:
 
 ```yaml
-name: market-audit
+name: aim-audit
 description: Полный маркетинговый аудит сайта
 triggers:
   - /aim audit
