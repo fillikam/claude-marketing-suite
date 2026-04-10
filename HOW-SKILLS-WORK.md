@@ -44,3 +44,7 @@
 ---
 
 Подробнее об архитектуре: [docs/architecture.md](docs/architecture.md)
+
+---
+
+> Сделано в **Лаборатории ИИ-Маркетинга** | [Telegram-канал](https://t.me/moremarketingisaid) — больше крутых AI-скиллов, связок, промптов и других крутых вещей

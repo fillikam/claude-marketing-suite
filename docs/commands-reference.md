@@ -61,3 +61,7 @@
 /aim headlines для курса по Python
 /aim social для B2B SaaS в финтехе
 ```
+
+---
+
+> Сделано в **Лаборатории ИИ-Маркетинга** | [Telegram-канал](https://t.me/moremarketingisaid) — больше крутых AI-скиллов, связок, промптов и других крутых вещей
