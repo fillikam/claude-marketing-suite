@@ -8,6 +8,7 @@
 [![Language](https://img.shields.io/badge/Language-RU%20%2F%20EN-green)]()
 [![Platform](https://img.shields.io/badge/Platform-Claude.ai-purple)]()
 [![License](https://img.shields.io/badge/License-MIT-yellow)](LICENSE)
+[![Download](https://img.shields.io/badge/⬇_Скачать_ZIP-все_10_скиллов-brightgreen?style=for-the-badge)](https://github.com/fsbtactic-code/claude-marketing-suite/releases/download/v1.0.0/claude-marketing-suite-all-skills.zip)
 
 </div>
 
@@ -82,7 +83,7 @@ Claude анализирует сайт, проверяет позиционир�
 
 > Самый простой способ — скачать ZIP и попросить Claude всё установить.
 
-1. **Скачайте ZIP-архив** — нажмите зелёную кнопку **Code → Download ZIP** на этой странице
+1. **[⬇️ Скачайте ZIP-архив со всеми скиллами](https://github.com/fsbtactic-code/claude-marketing-suite/releases/download/v1.0.0/claude-marketing-suite-all-skills.zip)** (108 KB)
 2. **Откройте [claude.ai](https://claude.ai)** (нужна подписка Pro или выше)
 3. **Прикрепите ZIP-файл** к чату (иконка 📎 скрепки)
 4. **Напишите этот промпт:**
